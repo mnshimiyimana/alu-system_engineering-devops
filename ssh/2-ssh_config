@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#SSH configuration without password but use the private key 
+Host * 
+        IndetityFile ~/.ssh/school
+        PasswordAuthentication no
