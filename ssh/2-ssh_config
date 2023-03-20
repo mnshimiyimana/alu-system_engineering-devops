@@ -3,3 +3,4 @@
 Host * 
         IndetityFile ~/.ssh/school
         PasswordAuthentication no
+        HostName 52.90.54.149
