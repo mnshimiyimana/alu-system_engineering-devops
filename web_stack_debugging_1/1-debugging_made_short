@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Using what I used in Task 0 but shorter
-sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
-service nginx restart
-kill "$(pgrep 'nginx' | head -1)"
+#What wa s done in task 0 but short and sweet
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+sudo service nginx restart
